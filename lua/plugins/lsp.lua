@@ -192,6 +192,6 @@ return { -- LSP Configuration & Plugins
     lsp_attach = lsp_attach,
     capabilities = require('cmp_nvim_lsp').default_capabilities(),
   })
-  lsp_zero.setup_servers({'gopls', 'lua_ls', 'pylsp'})
+  lsp_zero.setup_servers({'gopls', 'lua_ls', 'pylsp', 'nixd'})
   end,
 }
