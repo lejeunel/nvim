@@ -1,5 +1,3 @@
-print('tmux sessionizer')
 return {
-  vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>"),
-
+  vim.keymap.set("n", "<c-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>"),
 }
