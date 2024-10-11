@@ -1,25 +1,5 @@
 local ignore_which_key_opts = { noremap = true, silent = true, desc = 'which_key_ignore' }
 
--- basic telescope configuration
-local function toggle_telescope(harpoon_files)
-  local file_paths = {}
-  for _, item in ipairs(harpoon_files.items) do
-    table.insert(file_paths, item.value)
-  end
-  local conf = require('telescope.config').values
-
-  require('telescope.pickers')
-    .new({}, {
-      prompt_title = 'Harpoon',
-      finder = require('telescope.finders').new_table {
-        results = file_paths,
-      },
-      previewer = conf.file_previewer {},
-      sorter = conf.generic_sorter {},
-    })
-    :find()
-end
-
 return {
   'theprimeagen/harpoon',
   branch = 'harpoon2',
@@ -49,6 +29,12 @@ return {
     end, ignore_which_key_opts)
     vim.keymap.set('n', '<leader>4', function()
       require('harpoon'):list():select(4)
+    end, ignore_which_key_opts)
+    vim.keymap.set('n', '<leader>5', function()
+      require('harpoon'):list():select(5)
+    end, ignore_which_key_opts)
+    vim.keymap.set('n', '<leader>6', function()
+      require('harpoon'):list():select(6)
     end, ignore_which_key_opts)
   end,
 }
