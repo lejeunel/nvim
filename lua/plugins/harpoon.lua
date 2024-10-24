@@ -36,5 +36,17 @@ return {
     vim.keymap.set('n', '<leader>6', function()
       require('harpoon'):list():select(6)
     end, ignore_which_key_opts)
+    vim.keymap.set('n', '<leader>7', function()
+      require('harpoon'):list():select(7)
+    end, ignore_which_key_opts)
+    vim.keymap.set('n', '<leader>8', function()
+      require('harpoon'):list():select(8)
+    end, ignore_which_key_opts)
+    vim.keymap.set('n', '<leader>9', function()
+      require('harpoon'):list():select(9)
+    end, ignore_which_key_opts)
+    vim.keymap.set('n', '<leader>0', function()
+      require('harpoon'):list():select(10)
+    end, ignore_which_key_opts)
   end,
 }
