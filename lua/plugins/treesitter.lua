@@ -6,6 +6,15 @@ return { -- Highlight, edit, and navigate code
       'luadoc', 'markdown', 'vim', 'vimdoc', 'python', 'go' },
     -- Autoinstall languages that are not installed
     auto_install = true,
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = '<space>e',
+        node_incremental = 'e',
+        node_decremental = '-',
+      },
+    },
+
     highlight = {
       enable = true,
       -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
