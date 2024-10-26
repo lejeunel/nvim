@@ -92,6 +92,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>bb', builtin.buffers, { desc = 'Switch Buffer' })
     vim.keymap.set('n', '<space>fd', ':Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[F]ile [D]ir' })
+    vim.keymap.set('n', '<space>fe', ':Oil<CR>', { desc = '[F]ile [E]xplore' })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
