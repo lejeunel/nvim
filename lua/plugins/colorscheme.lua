@@ -1,5 +1,5 @@
-return { "luisiacc/gruvbox-baby", priority = 1000,
+return { "sainnhe/gruvbox-material", priority = 1000,
       config = function()
-        vim.cmd.colorscheme('gruvbox-baby')
+        vim.cmd.colorscheme('gruvbox-material')
       end
     }
