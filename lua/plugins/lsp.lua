@@ -5,7 +5,6 @@ return { -- LSP Configuration & Plugins
     -- Useful status updates for LSP.
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
     { 'j-hui/fidget.nvim', opts = {} },
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
     -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     { 'folke/neodev.nvim', opts = {} },
@@ -168,8 +167,6 @@ return { -- LSP Configuration & Plugins
       'stylua', -- Used to format Lua code
     })
 
-  local lsp_zero = require('lsp-zero')
-
   -- lsp_attach is where you enable features that only work
   -- if there is a language server active in the file
   local lsp_attach = function(client, bufnr)
@@ -187,11 +184,5 @@ return { -- LSP Configuration & Plugins
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
   end
 
-  lsp_zero.extend_lspconfig({
-    sign_text = true,
-    lsp_attach = lsp_attach,
-    capabilities = require('cmp_nvim_lsp').default_capabilities(),
-  })
-  lsp_zero.setup_servers({'gopls', 'lua_ls', 'pylsp', 'nixd', 'clangd'})
   end,
 }
